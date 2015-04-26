@@ -47,12 +47,12 @@ colnames(subj) <- 'subject'
 data <- cbind(subj, x.mean.sd, y)
 str(data)
 
-write.table(data, file = "merged.txt",row.names=TRUE, na="",col.names=TRUE, sep=",")
+write.table(data, file = "merged.txt",row.names=FALSE, na="",col.names=FALSE, sep=",")
 
 # Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 average <- aggregate(x=data, by=list(activities=data$activity, subj=data$subject), FUN=mean)
 str(average)
-write.table(average, file = "average.txt",row.names=TRUE, na="",col.names=TRUE, sep=",")
+write.table(average, file = "average.txt",row.names=FALSE, na="",col.names=FALSE, sep=",")
 
 
 
