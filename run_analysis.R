@@ -1,4 +1,6 @@
 getwd()
+
+
 library(RCurl)
 
 if (!file.info('UCI HAR Dataset')$isdir=FALSE) {
